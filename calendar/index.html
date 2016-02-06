@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/calendar.css">
+    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">
+</head>
+<body style="">
+
+<div style="width: 1000px; margin: 50px auto;">
+
+    <form action="">
+        <div class="calendar"></div>
+        <input type="hidden" name="" id="test">
+        <div class="calendar-submit">
+            <button type="button" class="calendar-btn">Rechercher</button>
+        </div>
+
+
+    </form>
+
+
+
+
+
+
+    <div style="margin: 50px 0 0 0;"></div>
+
+    <div>
+        <input type="text" id="seetest">
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="../vendor/jquery/dist/jquery.min.js"></script>
+<script src="../vendor/moment/min/moment.min.js"></script>
+<script src="./js/calendar.min.js"></script>
+
+<script>
+    $(function(){
+        moment.locale('fr');
+        var ipt = $("#test");
+        var ipt2 = $("#seetest");
+        $(".calendar").nicoCalendar({
+            "startDate": [1, "d"],
+            "endDate": [1, "y"],
+            onChange: function(date){
+                ipt.val(date);
+                ipt2.val(date);
+            }
+        });
+
+        if(ipt.val() != ""){
+            var c = $(".calendar").data("plugin_nicoCalendar");
+            c.setDate(ipt.val());
+        }
+
+    });
+</script>
+</body>
+</html>

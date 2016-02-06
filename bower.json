@@ -1,0 +1,24 @@
+{
+  "name": "widgets",
+  "authors": [
+    "Nicolas Canfrere <canfrere.nicolas@orange.fr>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "font-awesome": "fontawesome#^4.5.0",
+    "moment": "^2.11.2"
+  }
+}
